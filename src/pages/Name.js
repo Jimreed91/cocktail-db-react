@@ -1,15 +1,15 @@
-import { useState } from 'react'
-import axios from 'axios'
+import { useState, useEffect } from 'react'
+import cocktailsService from './services/cocktailsService.js'
 
 const Name = () => {
   const [ newName, setName] = useState("")
-  const [ cocktails, setCocktails ] = useState([])
-  const baseUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
+  const [ cocktails, setCocktails ] = useState()
 
   const handleSubmit = event => {
     event.preventDefault()
-    const request = axios.get(`${baseUrl}${newName}`)
-    return request.then(response => setCocktails(response.data.drinks))
+    cocktailsService
+      .getByName(newName)
+      .then(response => console.log(response))
   }
   const handleName = event => {
     console.log(event.target.value)
