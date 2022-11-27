@@ -1,22 +1,27 @@
 import { useState, useEffect } from 'react'
-import cocktailsService from './services/cocktailsService.js'
-
+import cocktailsService from '../services/cocktailsService.js'
+import CardGrid from '../components/CardGrid'
 const Name = () => {
   const [ newName, setName] = useState("")
-  const [ cocktails, setCocktails ] = useState()
+  const [ cocktails, setCocktails ] = useState(null)
 
+  useEffect( () => {
+    cocktailsService
+      .getByName("margarita")
+      .then(drinks => setCocktails(drinks), [])
+  }, [])
   const handleSubmit = event => {
     event.preventDefault()
     cocktailsService
       .getByName(newName)
-      .then(response => console.log(response))
+      .then(drinks => setCocktails(drinks))
   }
   const handleName = event => {
     console.log(event.target.value)
     setName(event.target.value)
   }
   return(
-    <div className="flex flex-col h-screen bg-slate-800 ">
+    <div className="flex flex-col h-fit px-4 bg-slate-800 ">
       <h2 className="text-center text-xl text-white p-5">
         Search for a cocktail by name</h2>
       <div className="self-center border-orange-200">
@@ -31,6 +36,8 @@ const Name = () => {
           transition hover:ease-in hover:bg-gradient-to-br duration-300 " />
         </form>
       </div>
+     <CardGrid cocktails={cocktails}/>
+
     </div>
     )
 };
