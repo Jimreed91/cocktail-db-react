@@ -1,8 +1,9 @@
-
+import { Link } from "react-router-dom";
 const Card = ({cocktail}) => {
 
   return(
-    <a href="#" className="border border-fuchsia-300 p-5 rounded-lg bg-slate-900">
+    <Link to={`/cocktail/${cocktail.idDrink}`} className="border border-fuchsia-300 p-5 rounded-lg bg-slate-900"
+    state={cocktail}>
 
 
     <div className="flex flex-col">
@@ -19,7 +20,7 @@ const Card = ({cocktail}) => {
         <p className="text-2xl font-bold text-white">{cocktail.strDrink}</p>
       </div>
     </div>
-  </a>
+  </Link>
 
   )
 }
