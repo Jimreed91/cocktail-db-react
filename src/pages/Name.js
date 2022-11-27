@@ -1,11 +1,15 @@
 import { useState, useEffect } from 'react'
 import cocktailsService from '../services/cocktailsService.js'
 import CardGrid from '../components/CardGrid'
+import { motion } from "framer-motion"
 const Name = () => {
   const [ newName, setName] = useState("")
   const [ cocktails, setCocktails ] = useState(null)
 
   useEffect( () => {
+    setTimeout(()=>{
+
+     }, 5000)
     cocktailsService
       .getByName("margarita")
       .then(drinks => setCocktails(drinks), [])
@@ -21,7 +25,13 @@ const Name = () => {
     setName(event.target.value)
   }
   return(
-    <div className="flex flex-col h-fit px-4 bg-slate-800 ">
+    <motion.div
+      className="flex flex-col h-fit min-h-screen px-4 bg-slate-800 "
+      initial={{opacity: 0}}
+      animate={{opacity: 1}}
+      exit={{opacity: 0}}
+
+      >
       <h2 className="text-center text-xl text-white p-5">
         Search for a cocktail by name</h2>
       <div className="self-center border-orange-200">
@@ -38,7 +48,7 @@ const Name = () => {
       </div>
      <CardGrid cocktails={cocktails}/>
 
-    </div>
+    </motion.div>
     )
 };
 
