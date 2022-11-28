@@ -2,7 +2,7 @@ import { motion } from "framer-motion"
 const Card = ({cocktail, image}) => {
 
   return(
-    <div className="border border-fuchsia-300 p-5 rounded-lg bg-slate-900"
+    <div className=""
     >
       <motion.div
         className="flex flex-col"
@@ -16,7 +16,7 @@ const Card = ({cocktail, image}) => {
           src={image}
           className="border border-cyan-300 rounded-sm"
         />
-        <div className="p-2">
+        <div className="p-2 flex-shrink">
           <p className="text-sm font-medium uppercase tracking-widest text-orange-200">
             {cocktail.strIBA}
           </p>
