@@ -21,7 +21,9 @@ const Card = ({cocktail, image}) => {
             {cocktail.strIBA}
           </p>
 
+
           <p className="text-2xl font-bold text-white">{cocktail.strDrink}</p>
+
         </div>
       </motion.div>
     </div>

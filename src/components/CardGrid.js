@@ -7,7 +7,7 @@ const CardGrid = ({cocktails}) => {
       <Link
         to={`/cocktail/${cocktail.idDrink}`}
         state={cocktail}
-        className="border border-fuchsia-300 p-5 rounded-lg bg-slate-900"
+        className="border border-fuchsia-300 p-5 rounded-lg bg-slate-900 shadow hover:ring-8 ring-offset-2 ring-offset-slate-700 ring-pink-300 focus:ring-3 focus:rung-offset-6"
 
         key={cocktail.idDrink}
        >

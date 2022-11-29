@@ -1,14 +1,16 @@
 
+import { useEffect } from "react";
 import { Outlet, Link } from "react-router-dom";
+import Footer from '../components/Footer'
 
 const Layout = () => {
   return (
     <>
-      <nav>
-        <div className="bg-slate-800 py-4">
-          <h1 className="sm:text-center font-mono sm:text-8xl text-xl font-thin text-transparent
-                        bg-clip-text bg-gradient-to-r from-fuchsia-300 to-orange-200">
-            Cocktails-db</h1>
+      <nav id="nav">
+        <div className="bg-gradient-to-t from-slate-800 to-black py-4">
+          <h1 className=" font-mono sm:text-4xl text-xl font-thin text-transparent
+                        bg-clip-text bg-gradient-to-r from-fuchsia-300 to-orange-400">
+            🍹 Cocktail Hunter </h1>
         </div>
           <div className="flex justify-around flex-wrap font-bold  sm:text-2xl bg-orange-200">
 
@@ -41,7 +43,7 @@ const Layout = () => {
       </nav>
 
       <Outlet />
-
+      <Footer />
     </>
   )
 };

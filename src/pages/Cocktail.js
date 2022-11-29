@@ -11,23 +11,22 @@ console.log(cocktail)
 
   return(
       <motion.div
-        className="flex flex-wrap content-start justify-evenly min-h-screen pt-5 bg-slate-800 "
+        className="flex flex-wrap content-start justify-evenly w-fillmin-h-screen pt-5 bg-gradient-to-b from-slate-800 to-black "
         initial={{opacity: 0}}
         animate={{opacity: 1}}
         exit={{opacity: 0}}
       >
 
-        <div className="flex-auto justify-self-start max-w-sm sm:max-w-2xl border-fuchsia-300 sm:p-5 rounded-lg">
+        <div className="flex-auto justify-self-start sm:max-w-2xl border-fuchsia-300 sm:p-5 rounded-lg">
           <Card className=""cocktail={cocktail} image={cocktail.strDrinkThumb}/>
-          <Recipe cocktail={cocktail}/>
         </div>
-        <div className="flex flex-col flex-initial
+        <div className="flex flex-col flex-auto self-center
         " >
-          <h2 className="text-3xl text-white text-center">Ingredients</h2>
+          <h2 className="text-3xl text-white text-center text-cyan-200">Ingredients</h2>
             <IngredientList cocktail={cocktail}/>
         </div>
-        <div className="">
-
+        <div className="sm:w-3/4">
+          <Recipe cocktail={cocktail}/>
         </div>
       </motion.div>
     )
