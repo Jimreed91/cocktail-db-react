@@ -47,7 +47,7 @@ const Name = () => {
             className="text-black p-1 bg-orange-200" />
           <input type="submit" value="Submit" onBlur={handleSubmit}
           className="bg-gradient-to-tr  from-fuchsia-500 to-cyan-400
-          transition hover:ease-in hover:bg-gradient-to-br duration-300 " />
+          transition hover:ease-in hover:bg-gradient-to-br duration-300 text-xl" />
         </form>
       </div>
      <CardGrid cocktails={cocktails}/>

@@ -5,11 +5,17 @@ const Home = () => {
 
   return (
     <motion.div
-      className="flex flex-col justify-start items-center h-full bg-gradient-to-b from-slate-800 to-black "
+      className="flex flex-col justify-between items-center bg-gradient-to-b from-slate-800 to-black "
       initial={{opacity: 0}}
       animate={{opacity: 1}}
       exit={{opacity: 0}}
     >
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        className="text-3xl my-6 text-fuchsia-400 align-start">{'(* ˘⌣˘)◞🍹♥🍸ヽ(•‿•  )'}
+      </motion.p>
+
      <InfoCard
         title={"Welcome🍹"}
         p1={<p>I built this website to practice with
@@ -31,9 +37,27 @@ const Home = () => {
             </p>}
         p2={<p className="mt-3">Find my details at the bottom if you would like
               to get in touch!
-
             </p>}
       />
+      <InfoCard
+        title={"Getting Started 🍸"}
+        p1={<p>Getting started is simple, just choose "By Name" from the navbar at the top to
+               search for a cocktail by its name.
+            </p>}
+        p2={<p className="mt-2">Alternatively take a look in the 'by ingredient' tab to find something
+               with one of your favourite ingredients.
+            </p>}
+        />
+        <InfoCard
+        title={"Cocktail-db API 🥂"}
+        p1={<p>If you're curious about the api itself, you can find it here:
+            </p>}
+        p2={ <a href={"https://www.thecocktaildb.com/api.php"}>
+          <p className="text-center text-6xl mt-3">🍹</p>
+          </a>}
+        />
+
+
     </motion.div>
   );
 };

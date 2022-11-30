@@ -17,12 +17,24 @@ console.log(cocktail)
         exit={{opacity: 0}}
       >
 
-        <div className="flex-auto justify-self-start sm:max-w-2xl border-fuchsia-300 sm:p-5 rounded-lg">
-          <Card className=""cocktail={cocktail} image={cocktail.strDrinkThumb}/>
+        <div className="flex-auto justify-self-start sm:max-w-2xl border-fuchsia-300 sm:p-5 rounded-lg basis-2/3 sm:basis-1/3 grow-0">
+          <h2 className="text-4xl text-white mb-2">{cocktail.strDrink}</h2>
+          <img
+            alt="Cocktail"
+            src={cocktail.strDrinkThumb}
+            className="border border-cyan-300 rounded-sm"
+          />
+          <div className="p-2 flex-shrink">
+            <p className="text-sm font-medium uppercase tracking-widest text-orange-200">
+              {cocktail.strIBA}
+            </p>
+            <p className="text-white">{cocktail.strCategory}</p>
+          </div>
+
         </div>
-        <div className="flex flex-col flex-auto self-center
+        <div className="flex flex-col sm:basis-2/3 flex-auto self-center
         " >
-          <h2 className="text-3xl text-white text-center text-cyan-200">Ingredients</h2>
+          <h2 className="text-2xl text-white text-center text-cyan-200">Ingredients</h2>
             <IngredientList cocktail={cocktail}/>
         </div>
         <div className="sm:w-3/4">
