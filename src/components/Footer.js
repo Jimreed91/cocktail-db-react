@@ -8,14 +8,17 @@ const Footer = () => {
   return(
     <motion.div className="flex flex-col items-center justify-around h-96 w-fill bg-gradient-to-b from-black to-slate-800 text-white"
       layout
+
       >
       <motion.p initial={{ opacity: 0 }}
-         whileInView={{ opacity: 1 }}>
+         whileInView={{ opacity: 1 }}
+         transition={{ delay: 0.2}}>
 
           </motion.p>
       <motion.ul
          initial={{ opacity: 0 }}
          whileInView={{ opacity: 1 }}
+         transition={{ delay: 0.2, duration: 1}}
 
         className="flex items-center text-6xl font-thin text-orange-200">
         <motion.li className="p-2" whileHover={{ scale: 1.75 }}><a href="https://www.jimreed91.me/"><GiHobbitDoor className="text-5xl" /></a></motion.li>
@@ -29,8 +32,9 @@ const Footer = () => {
         className="text-3xl text-fuchsia-400">{'(* ˘⌣˘)◞🍹♥🍸ヽ(•‿•  )'}
       </motion.p> */}
       <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        initial={{ opacity: 0}}
+        whileInView={{ opacity: 1}}
+        transition={{ delay: 0.2, duration: 1}}
         className="text-xl text-emerald-100">{'jamesreed3050@gmail.com'}
       </motion.p>
     </motion.div>

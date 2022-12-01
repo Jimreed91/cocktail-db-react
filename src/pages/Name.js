@@ -2,20 +2,23 @@ import { useState, useEffect } from 'react'
 import cocktailsService from '../services/cocktailsService.js'
 import CardGrid from '../components/CardGrid'
 import { motion } from "framer-motion"
+
 const Name = () => {
-  const [ newName, setName] = useState("margarita")
+  const [ newName, setName] = useState(null)
   const [ cocktails, setCocktails ] = useState(null)
 
   useEffect( () => {
     setTimeout(()=>{
 
      }, 5000)
-
+    if(newName === null) {
     cocktailsService
-      .getByName(newName)
+      .getByName("margarita")
       .then(drinks => setCocktails(drinks), [])
       setName("")
+    }
   }, [])
+
   const handleSubmit = event => {
     event.preventDefault()
     cocktailsService

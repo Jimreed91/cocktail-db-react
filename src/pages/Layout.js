@@ -27,10 +27,10 @@ const Layout = () => {
               >By Name
             </Link>
             <Link
-              to="/ingredient"
+              to="/random"
               className="flex-auto  bg-gradient-to-r from-fuchsia-300 py-3 hover:bg-orange-300
               ease-in duration-300 text-center"
-              >Ingredient
+              >Random
             </Link>
             <Link
               to="/contact"
