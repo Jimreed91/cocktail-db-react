@@ -20,7 +20,7 @@ const Footer = () => {
          whileInView={{ opacity: 1 }}
          transition={{ delay: 0.2, duration: 1}}
 
-        className="flex items-center text-6xl font-thin text-orange-200">
+        className="flex items-center text-6xl font-thin text-orange-300">
         <motion.li className="p-2" whileHover={{ scale: 1.75 }}><a href="https://www.jimreed91.me/"><GiHobbitDoor className="text-5xl" /></a></motion.li>
         <motion.li className="p-2" whileHover={{ scale: 1.75 }}><a href="https://github.com/Jimreed91"><SlSocialGithub className="text-5xl" /></a></motion.li>
         <motion.li className="p-2" whileHover={{ scale: 1.75 }}><a href="https://www.linkedin.com/in/jamesreed91/"><SlSocialLinkedin className="text-5xl" /></a></motion.li>
@@ -35,7 +35,7 @@ const Footer = () => {
         initial={{ opacity: 0}}
         whileInView={{ opacity: 1}}
         transition={{ delay: 0.2, duration: 1}}
-        className="text-xl text-emerald-100">{'jamesreed3050@gmail.com'}
+        className="text-xl text-emerald-200">{'jamesreed3050@gmail.com'}
       </motion.p>
     </motion.div>
   )

@@ -4,7 +4,7 @@ import CardGrid from '../components/CardGrid'
 import { motion } from "framer-motion"
 
 const Name = () => {
-  const [ newName, setName] = useState(null)
+  const [ newName, setName] = useState("")
   const [ cocktails, setCocktails ] = useState(null)
 
   useEffect( () => {
