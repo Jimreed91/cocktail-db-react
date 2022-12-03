@@ -11,12 +11,10 @@ const Name = () => {
     setTimeout(()=>{
 
      }, 5000)
-    if(newName === null) {
     cocktailsService
       .getByName("margarita")
       .then(drinks => setCocktails(drinks), [])
       setName("")
-    }
   }, [])
 
   const handleSubmit = event => {
