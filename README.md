@@ -1,3 +1,59 @@
+# Cocktail Hunter
+> Frontend for the cocktail-db
+> check it out [_here_](https://chibil.ink/2e28).
+
+## Table of Contents
+* [General Info](#general-information)
+* [Technologies Used](#technologies-used)
+* [Features](#features)
+* [Screenshots](#screenshots)
+* [Project Status](#project-status)
+* [Room for Improvement](#room-for-improvement)
+<!-- * [License](#license) -->
+
+
+## General Information
+I built this app in about a week to practice with react and tailwind. It provides a responsive frontend for the cocktail-db database and allows you to search for cocktails by name.
+<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+
+
+## Technologies Used
+* HTML-5
+* CSS-3
+* React-18
+* Tailwind
+* Framer-motion
+* Axios
+* React-Router
+
+## Features
+* Pulls up cocktails searched by name
+* Displays details of individual cocktails
+* Can display a random cocktail
+
+
+## Screenshots
+![Example screenshot](./margarita.png)
+
+
+## Project Status
+Project is: _in progress_ 
+
+
+## Room for Improvement
+Adding filter functionality and general refactoring
+
+
+## Acknowledgements
+- This project uses https://www.thecocktaildb.com/
+
+
+<!-- Optional -->
+<!-- ## License -->
+<!-- This project is open source  -->
+
+<!-- You don't have to include all sections - just the one's relevant to your project -->
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
