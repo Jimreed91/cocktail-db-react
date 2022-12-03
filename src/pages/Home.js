@@ -44,8 +44,7 @@ const Home = () => {
         p1={<p>Getting started is simple, just choose "By Name" from the navbar at the top to
                search for a cocktail by its name.
             </p>}
-        p2={<p className="mt-2">Alternatively take a look in the 'by ingredient' tab to find something
-               with one of your favourite ingredients.
+        p2={<p className="mt-2">Alternatively take a look at the "Random" tab if you dont know what you're looking for
             </p>}
         />
         <InfoCard
