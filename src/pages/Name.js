@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import cocktailsService from '../services/cocktailsService.js'
 import CardGrid from '../components/CardGrid'
 import { motion } from "framer-motion"
+import Filters from '../components/Filters.js';
 
 const Name = () => {
   const [ newName, setName] = useState("")
@@ -39,9 +40,9 @@ const Name = () => {
       >
       <h2 className="text-center text-xl text-white p-5 ">
         Search for a cocktail by name</h2>
-      <div className="self-center border-orange-200">
+      <div className="flex self-center border-orange-200">
         <form onSubmit={handleSubmit}
-        className="flex flex-col border border-cyan-500 rounded">
+        className="flex border border-cyan-500 rounded">
             <input type="text" name="name"
             onChange={handleName}
             value={newName} placeholder="Margarita"
@@ -51,6 +52,7 @@ const Name = () => {
           transition hover:ease-in hover:bg-gradient-to-br duration-300 text-xl" />
         </form>
       </div>
+      <Filters/>
      <CardGrid cocktails={cocktails}/>
 
     </motion.div>
