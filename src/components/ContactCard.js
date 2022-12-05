@@ -4,46 +4,58 @@ import { SlControlStart } from 'react-icons/sl';
 import { useInView } from 'react-intersection-observer'
 
   const ContactCard = ({logo, text, ccStyle, link}) => {
-    const { ref, inView } = useInView();
-    const controls = useAnimationControls()
-
-    useEffect(() => {
-      if (inView) {
-        controls.start('visible')
-      }
-      if (!inView) {
-        controls.start('hidden')
-      }
-    }, [controls, inView])
 
     const contactVariants = {
-      hidden: {scale: 0,
-               opacity:0,
-               y: -50
+      hidden: {
+        scale: 0,
+        opacity:0,
               },
       visible: {
         scale: 1,
         opacity:1,
-        y: 10
-
-
+      },
+      transition: {
+        duration: 1,
+        type: "spring",
+        bounce: 0.7
+      }
+    }
+    const logoAnimate={
+      hidden: {
+        scale: 0,
+        opacity:0,
+        x: 200
+              },
+      visible: {
+        scale: 1,
+        opacity:1,
+        x: 0
+      }
+    }
+    const textAnimate={
+      hidden: {
+        scale: 0,
+        opacity:0,
+        x: -200
+              },
+      visible: {
+        scale: 1,
+        opacity:1,
+        x: 0
       }
     }
 
     return(
     <motion.a href={link}
-      ref={ref}
-      initial="hidden"
-      animate={controls}
-      transition={{
-        duration: 0.5,
-        delay: 0.3,
-        // ease: "ease-in"
-      }}
-      variants={contactVariants}
+      initial={"hidden"}
+      whileInView={"visible"}
+      transition={{staggerChildren: 0.2}}
+      viewport={{once: true, amount: 1}}
       className={ccStyle}>
-      {logo}
-      <p>{text}</p>
+      <motion.div
+            variants={logoAnimate}>{logo}</motion.div>
+      <motion.p
+            variants={textAnimate}>{text}</motion.p>
     </motion.a>
     )
   }
