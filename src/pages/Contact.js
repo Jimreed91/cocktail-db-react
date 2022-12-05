@@ -1,8 +1,7 @@
-import { motion, animatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { GiHobbitDoor } from 'react-icons/gi'
 
 import { SlSocialGithub, SlSocialLinkedin } from 'react-icons/sl'
-import { RiMediumLine } from 'react-icons/ri'
 import { TbArrowBigDown } from 'react-icons/tb'
 
 import ContactCard from '../components/ContactCard'

@@ -1,25 +1,7 @@
-import { motion, useAnimationControls } from 'framer-motion'
-import { useEffect } from 'react';
-import { SlControlStart } from 'react-icons/sl';
-import { useInView } from 'react-intersection-observer'
+import { motion } from 'framer-motion'
 
   const ContactCard = ({logo, text, ccStyle, link}) => {
 
-    const contactVariants = {
-      hidden: {
-        scale: 0,
-        opacity:0,
-              },
-      visible: {
-        scale: 1,
-        opacity:1,
-      },
-      transition: {
-        duration: 1,
-        type: "spring",
-        bounce: 0.7
-      }
-    }
     const logoAnimate={
       hidden: {
         scale: 0,

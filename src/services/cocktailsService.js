@@ -20,4 +20,4 @@ const getRandom = () => {
   return request.then(response => response.data.drinks[0])
 }
 
-export default  { getByName, getByIngredient, getRandom}
+export default  { getByName, getByIngredient, getRandom }

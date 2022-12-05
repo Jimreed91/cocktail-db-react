@@ -1,11 +1,9 @@
-import { useHistory, useParams, useLocation } from 'react-router-dom'
-import Card from '../components/Card'
+import { useLocation } from 'react-router-dom'
 import { motion } from "framer-motion"
 import IngredientList from '../components/IngredientList'
 import Recipe from '../components/Recipe'
 const Cocktail = () => {
 const location = useLocation()
-const { id } = useParams()
 const cocktail = location.state
 console.log(cocktail)
 

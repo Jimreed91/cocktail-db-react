@@ -1,6 +1,5 @@
-import { motion, useScroll } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { GiHobbitDoor } from 'react-icons/gi'
-import { RxDot } from 'react-icons/rx'
 import { SlSocialGithub, SlSocialLinkedin } from 'react-icons/sl'
 import { RiMediumLine } from 'react-icons/ri'
 const Footer = () => {

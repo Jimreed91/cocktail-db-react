@@ -1,5 +1,4 @@
 import { LayoutGroup } from 'framer-motion'
-import { useEffect } from "react";
 import { Outlet, Link } from "react-router-dom";
 import Footer from '../components/Footer'
 

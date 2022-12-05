@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import Card from '../components/Card'
 import { motion } from "framer-motion"
 import IngredientList from '../components/IngredientList'
 import Recipe from '../components/Recipe'
@@ -7,8 +6,6 @@ import cocktailsService from '../services/cocktailsService'
 const Random = () => {
 
   const [cocktail, setCocktail] = useState()
-  const [show, setShow] = useState(false)
-  // cocktailsService.getRandom()
   useEffect(() => {
     cocktailsService
     .getRandom()
