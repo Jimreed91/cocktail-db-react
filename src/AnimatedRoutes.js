@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom"
+import { Routes, Route, useLocation } from "react-router-dom"
 import Layout from "./pages/Layout"
 import Home from "./pages/Home"
 import Random from "./pages/Random"
@@ -7,8 +7,6 @@ import Name from "./pages/Name"
 import Contact from "./pages/Contact"
 import NoPage from "./pages/NoPage"
 import Cocktail from "./pages/Cocktail"
-
-import { AnimatePresence } from 'framer-motion'
 
 const AnimatedRoutes = () => {
   const location = useLocation()
