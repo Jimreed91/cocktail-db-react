@@ -22,8 +22,9 @@ const getRandom = () => {
 //Retrieves lists of strings to filter cocktails by
 const getList = (key) => {
   const request = axios.get(`${baseUrl}list.php?${key}=list`)
-  console.log(`${baseUrl}list.php?${key}=list`)
-  return request.then(response => response)
+  return request.then(response => response.data.drinks)
+                .then(response => response.map((e) => Object.values(e)[0]))
+                .then(response => ["Any"].concat(response))
 }
 
 export default  { getByName, getByIngredient, getRandom ,getList}

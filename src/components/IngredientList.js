@@ -28,8 +28,8 @@ const IngredientList = ({cocktail}) => {
     <table className=" m-6 table-auto text-white text-center bg-slate-900 rounded  border border-fuchsia-300">
   <thead className="m-6">
     <tr>
-      <th className="sm:text-2xl p-2">Ingredient</th>
-      <th className="sm:text-2xl p-2 border border-fuchsia-300">Measure</th>
+      <th className="sm:text-2xl p-1">Ingredient</th>
+      <th className="sm:text-2xl p-1 border border-fuchsia-300">Measure</th>
       <th></th>
     </tr>
   </thead>

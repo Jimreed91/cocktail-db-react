@@ -30,7 +30,7 @@ console.log(cocktail)
           </div>
 
         </div>
-        <div className="flex flex-col sm:basis-2/3 flex-auto self-center
+        <div className="flex flex-col sm:basis-1/2 grow-0 flex-auto self-center
         " >
           <h2 className="text-2xl text-white text-center text-cyan-200">Ingredients</h2>
             <IngredientList cocktail={cocktail}/>

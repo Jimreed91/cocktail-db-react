@@ -7,14 +7,18 @@ import Filters from '../components/Filters.js';
 const Name = () => {
   const [ newName, setName] = useState("")
   const [ cocktails, setCocktails ] = useState(null)
-
+  const [ cocktailsToShow, setCocktailsToShow ] = useState(cocktails)
+  const [ currentFilter, setCurrentFilter ] =useState(null)
   useEffect( () => {
     setTimeout(()=>{
 
      }, 5000)
     cocktailsService
       .getByName("margarita")
-      .then(drinks => setCocktails(drinks), [])
+      .then(drinks => {
+        setCocktails(drinks)
+        setCocktailsToShow(drinks)}
+      , [])
       setName("")
   }, [])
 
@@ -22,9 +26,26 @@ const Name = () => {
     event.preventDefault()
     cocktailsService
       .getByName(newName)
-      .then(drinks => setCocktails(drinks))
-      setName("")
+      .then(drinks => {
+        setCocktails(drinks)
+        setCocktailsToShow(drinks)}
+      , [])
 
+  }
+
+  const handleFilter = (event, fullSearchKey) => {
+    event.preventDefault()
+    const filterText = event.target.value
+    console.log(filterText)
+    if (filterText == "Any") {
+      setCocktailsToShow(cocktails)
+    } else {
+    setCocktailsToShow(
+      cocktails.filter((cocktail) =>
+        cocktail[fullSearchKey] === filterText
+      )
+    )
+    }
   }
   const handleName = event => {
     console.log(event.target.value)
@@ -52,8 +73,8 @@ const Name = () => {
           transition hover:ease-in hover:bg-gradient-to-br duration-300 text-xl" />
         </form>
       </div>
-      <Filters/>
-     <CardGrid cocktails={cocktails}/>
+      <Filters handleFilter={handleFilter}/>
+     <CardGrid cocktails={cocktailsToShow}/>
 
     </motion.div>
     )
