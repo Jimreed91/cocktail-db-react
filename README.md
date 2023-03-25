@@ -1,6 +1,6 @@
 # Cocktail Hunter
-> Frontend for the cocktail-db
-> check it out [_here_](https://chibil.ink/2e28).
+- I used this app as my first experiment with React Js, I also tried out Tailwind and framer motion for the first time. I went a little crazy with the style and animations to test the limits a bit.
+> check it out [_here_]https://cocktail-hunter.netlify.app/).
 
 ## Table of Contents
 * [General Info](#general-information)
