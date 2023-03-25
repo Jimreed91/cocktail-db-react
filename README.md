@@ -1,6 +1,6 @@
 # Cocktail Hunter
 - I used this app as my first experiment with React Js, I also tried out Tailwind and framer motion for the first time. I went a little crazy with the style and animations to test the limits a bit.
-> check it out [_here_]https://cocktail-hunter.netlify.app/).
+> check it out [_here_](https://cocktail-hunter.netlify.app/).
 
 ## Table of Contents
 * [General Info](#general-information)
